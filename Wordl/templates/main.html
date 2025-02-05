@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WordOfToday</title>
+    <!--Importing the js-->
+    <script src="{{ url_for('static', filename='scripts/main.js')}}"></script>
+  </head>
+  <body>
+    <form action="/submite" method="POST" id="form1">
+      <!-- Input Fields 1-->
+      <input
+        type="text"
+        id="input1"
+        name="input1"
+        oninput="moveToNextInput(this, 'input2')"
+        idOfInput="1"
+        maxlength="1"
+        autofocus
+      />
+      <input
+        type="text"
+        id="input2"
+        name="input2"
+        oninput="moveToNextInput(this, 'input3')"
+        idOfInput="2"
+        maxlength="1"
+      />
+      <input
+        type="text"
+        id="input3"
+        name="input3"
+        oninput="moveToNextInput(this, 'input4')"
+        idOfInput="3"
+        maxlength="1"
+      />
+      <input
+        type="text"
+        id="input4"
+        name="input4"
+        oninput="moveToNextInput(this, 'input5')"
+        idOfInput="4"
+        maxlength="1"
+      />
+      <input
+        type="text"
+        id="input5"
+        name="input5"
+        idOfInput="5"
+        maxlength="1"
+      />
+      <!--<button type="submit"></button>-->
+    </form>
+  </body>
+</html>
