@@ -6,15 +6,22 @@
     <title>WordOfToday</title>
     <!--Importing the js-->
     <script src="{{ url_for('static', filename='scripts/main.js')}}"></script>
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/main.css')}}">
   </head>
   <body>
-    <form action="/submite" method="POST" id="form1">
+    <!--Headline-->
+    <h1>Wordl</h1>
+    <!--content wrapper-->
+    <div id="contentWrapper">
+      
+      <!-- Form 1-->
+     <form action="/submite" method="POST" id="form1" class="active">
       <!-- Input Fields 1-->
       <input
         type="text"
         id="input1"
         name="input1"
-        oninput="moveToNextInput(this, 'input2')"
+        oninput="moveToNextInput(this, 'input2'), this.value = this.value.toUpperCase()"
         idOfInput="1"
         maxlength="1"
         autofocus
@@ -23,7 +30,7 @@
         type="text"
         id="input2"
         name="input2"
-        oninput="moveToNextInput(this, 'input3')"
+        oninput="moveToNextInput(this, 'input3'), this.value = this.value.toUpperCase()"
         idOfInput="2"
         maxlength="1"
       />
@@ -31,7 +38,7 @@
         type="text"
         id="input3"
         name="input3"
-        oninput="moveToNextInput(this, 'input4')"
+        oninput="moveToNextInput(this, 'input4'), this.value = this.value.toUpperCase()"
         idOfInput="3"
         maxlength="1"
       />
@@ -39,8 +46,9 @@
         type="text"
         id="input4"
         name="input4"
-        oninput="moveToNextInput(this, 'input5')"
+        oninput="moveToNextInput(this, 'input5'), this.value = this.value.toUpperCase()"
         idOfInput="4"
+        class="partiallyCorrect"
         maxlength="1"
       />
       <input
@@ -49,8 +57,12 @@
         name="input5"
         idOfInput="5"
         maxlength="1"
+        class="correct"
+        oninput="this.value = this.value.toUpperCase()"
       />
-      <!--<button type="submit"></button>-->
     </form>
+  </div>
+    
+      
   </body>
 </html>

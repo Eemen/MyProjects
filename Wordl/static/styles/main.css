@@ -1,0 +1,29 @@
+#contentWrapper{
+    background-color: red;
+    display: flex;
+    justify-content: center;
+}
+
+#form1 {
+    width: 30vw;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+#form1 input{
+    background-color: grey;
+    height: 4rem;
+    aspect-ratio: 1;
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.correct{
+    background-color: green !important;
+}
+
+.partiallyCorrect{
+    background-color: orange !important;
+}
