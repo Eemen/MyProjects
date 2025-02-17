@@ -12,6 +12,8 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 #init the database
 init_database(app)
 
+with app.app_context():
+    print(Word.query.all())
 
 @app.route('/main')
 def home():
@@ -49,7 +51,7 @@ def getRandomWord():
 @app.route('/load_csv', methods=['GET'])
 def load_csv_route():
     # Local CSV file path (example: 'data/words.csv')
-    csv_file_path = 'Wordl\dump\words.csv'
+    csv_file_path = '.\dump\words.csv'
     # Load the CSV data into the database
     response, status_code = load_csv_from_file(csv_file_path)
     return jsonify(response), status_code

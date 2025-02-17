@@ -92,4 +92,48 @@ function processForm() {
     //get the intersections
     let intersections = inputValues.filter(value => apiValues.includes(value))
     console.log("interactions: " + intersections)
+
+    //sort the list with indexes 
+    let valueListWithIndex = []
+    apiValues.forEach((apiValue) => {
+        if(intersections.includes(apiValue)){
+            valueListWithIndex.push(apiValue)
+        } else {
+            valueListWithIndex.push("null")
+        }
+    })
+
+    //console.log("positionen: " + valueListWithIndex)
+
+
+    
+    for(i = 0; i < 5;i++){
+        //store the two index values
+        value1 = inputValues[i]
+        value2 = valueListWithIndex[i]
+        //compare the two values and if two the value is correct
+        if(value1 === value2) {
+            console.log("index " + i + " is correct")
+            //select the corressponding field
+            var selectetInputField = document.getElementById(`input${i + 1}`);
+            selectetInputField.classList.add('correct')
+            //update the index list so the correct answers are also null
+            valueListWithIndex[i] = "null"
+        }  
+    }
+    //console.log(valueListWithIndex)
+    
+    for(i = 0; i < 5; i++){
+        //store the value
+        value1 = inputValues[i]
+        //compare the two values and if two the value is partiallycorrect
+        if(valueListWithIndex.includes(value1)){
+            console.log("index " + i + " is correct")
+            //select the corressponding field
+            var selectetInputField = document.getElementById(`input${i + 1}`);
+            selectetInputField.classList.add('partiallyCorrect')
+        
+        }  
+    }
+
 }   
