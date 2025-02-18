@@ -1,5 +1,7 @@
 addEventListener("DOMContentLoaded", (Event) => {
   document.addEventListener("keydown", function (Event) {
+    //hande the activation of the forms
+
     //Evenet Listerner for the jumping to the preovious Input
     if (Event.key === "Backspace") {
       //let form1 = document.getElementById('form1')
@@ -10,6 +12,9 @@ addEventListener("DOMContentLoaded", (Event) => {
     if (Event.key === "Enter") {
       //submit the form if possible
       inputValidation();
+      //log active Form
+      //let activeForm = document.querySelector('.active')
+      //console.log(activeForm)
     }
   });
   //at the beginning do the api call for the random word
@@ -41,27 +46,43 @@ function moveToPreviousInput() {
   }
 }
 
+
 //cheking of the supmit is a full word and submit
 function inputValidation() {
+  //get active form
+  let activeForm = document.querySelector(".active");
   //push all the values in the array
   let inputs = [];
   for (let index = 0; index < 5; index++) {
-    inputs.push(document.getElementById(`input${index + 1}`).value);
+    console.log(activeForm[index].value)
+    inputs.push(activeForm[index].value);
   }
 
   //validate the inputs for completeness
   if (inputs.some((value) => value === "")) {
-    //focus the first not complete input
-    //get the first emty index and element
-    let index = inputs.findIndex((value) => value === "");
-    let input = document.getElementById(`input${index + 1}`);
-    input.focus();
-
+      focusIncompleteInput();
     return;
   }
 
   processForm();
 }
+
+//jump to the first not complete input
+function focusIncompleteInput() {
+  //get active form
+  let activeForm = document.querySelector('.active')
+  //get the values 
+  values = []
+  for (let i = 0; i < 5; i++){
+    values.push(activeForm[i].value)
+  }
+  //get the index of missing value
+  let index = values.findIndex((value) => value === "");
+  //focus on that input
+  let input = activeForm[index]
+  input.focus()
+}
+
 
 //declare api Values globally
 let apiValues = [];
@@ -156,22 +177,26 @@ function selectNextForm() {
   nextForm.classList.add("active");
   formIndex++;
   toggleInput();
+  focusIncompleteInput();
 }
 
 function toggleInput() {
+
   //get active Form
   let activeForm = document.querySelector(".active");
-
   //activate active Form
   for (let i = 0; i < 5; i++) {
     activeForm[i].disabled = false;
   }
 
   //get deactive Forms
-  let deactiveForms = document.querySelectorAll(".deactive");
-
+  let deactiveForms = document.querySelectorAll('.deactive');
+  console.log(deactiveForms)
   //deactivate all deactiv Forms
   for (let i = 0; i < 5; i++) {
-    deactiveForms[0][i].disabled = true;
+    //console.log(deactiveForms[i]);
+    for (let a = 0; a < 5; a++){
+      deactiveForms[i][a].disabled = true
+    }
   }
 }

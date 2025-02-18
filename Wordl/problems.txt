@@ -1,5 +1,7 @@
-die Sperre geht nicht weiter
+(die Sperre geht nicht weiter) done
 
-wenn enter sollte die Erste wieder gedrükt werden
+(wenn enter sollte die Erste wieder gedrükt werden) done
 
 style muss besser werden 
+
+gewinn logic
