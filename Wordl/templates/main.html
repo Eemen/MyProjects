@@ -6,61 +6,301 @@
     <title>WordOfToday</title>
     <!--Importing the js-->
     <script src="{{ url_for('static', filename='scripts/main.js')}}"></script>
-    <link rel="stylesheet" href="{{url_for('static', filename='styles/main.css')}}">
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='styles/main.css')}}"
+    />
   </head>
   <body>
     <!--Headline-->
     <h1>Wordl</h1>
     <!--content wrapper-->
     <div id="contentWrapper">
-      
       <!-- Form 1-->
-     <form action="/submite" method="POST" id="form1" class="active">
-      <!-- Input Fields 1-->
-      <input
-        type="text"
-        id="input1"
-        name="input1"
-        oninput="moveToNextInput(this, 'input2'), this.value = this.value.toUpperCase()"
-        idOfInput="1"
-        maxlength="1"
-        autofocus
-      />
-      <input
-        type="text"
-        id="input2"
-        name="input2"
-        oninput="moveToNextInput(this, 'input3'), this.value = this.value.toUpperCase()"
-        idOfInput="2"
-        maxlength="1"
-      />
-      <input
-        type="text"
-        id="input3"
-        name="input3"
-        oninput="moveToNextInput(this, 'input4'), this.value = this.value.toUpperCase()"
-        idOfInput="3"
-        maxlength="1"
-      />
-      <input
-        type="text"
-        id="input4"
-        name="input4"
-        oninput="moveToNextInput(this, 'input5'), this.value = this.value.toUpperCase()"
-        idOfInput="4"
-        maxlength="1"
-      />
-      <input
-        type="text"
-        id="input5"
-        name="input5"
-        idOfInput="5"
-        maxlength="1"
-        oninput="this.value = this.value.toUpperCase()"
-      />
-    </form>
-  </div>
-    
-      
+      <form action="/submite" method="POST" id="form1" class="active form">
+        <!-- Input Fields 1-->
+        <input
+          type="text"
+          id="input1"
+          name="input1"
+          oninput="moveToNextInput(this, 2), this.value = this.value.toUpperCase()"
+          idOfInput="1"
+          maxlength="1"
+          autofocus
+        />
+        <input
+          type="text"
+          id="input2"
+          name="input2"
+          oninput="moveToNextInput(this, 3), this.value = this.value.toUpperCase()"
+          idOfInput="2"
+          maxlength="1"
+        />
+        <input
+          type="text"
+          id="input3"
+          name="input3"
+          oninput="moveToNextInput(this, 4), this.value = this.value.toUpperCase()"
+          idOfInput="3"
+          maxlength="1"
+        />
+        <input
+          type="text"
+          id="input4"
+          name="input4"
+          oninput="moveToNextInput(this, 5), this.value = this.value.toUpperCase()"
+          idOfInput="4"
+          maxlength="1"
+        />
+        <input
+          type="text"
+          id="input5"
+          name="input5"
+          idOfInput="5"
+          maxlength="1"
+          oninput="this.value = this.value.toUpperCase()"
+        />
+      </form>
+    </div>
+
+    <div id="contentWrapper">
+      <!-- Form 2-->
+      <form action="/submite" method="POST" id="form2" class="deactive form">
+        <!-- Input Fields 2-->
+        <input
+          type="text"
+          id="input1"
+          name="input1"
+          oninput="moveToNextInput(this, 2), this.value = this.value.toUpperCase()"
+          idOfInput="1"
+          maxlength="1"
+          autofocus
+        />
+        <input
+          type="text"
+          id="input2"
+          name="input2"
+          oninput="moveToNextInput(this, 3), this.value = this.value.toUpperCase()"
+          idOfInput="2"
+          maxlength="1"
+        />
+        <input
+          type="text"
+          id="input3"
+          name="input3"
+          oninput="moveToNextInput(this, 4), this.value = this.value.toUpperCase()"
+          idOfInput="3"
+          maxlength="1"
+        />
+        <input
+          type="text"
+          id="input4"
+          name="input4"
+          oninput="moveToNextInput(this, 5), this.value = this.value.toUpperCase()"
+          idOfInput="4"
+          maxlength="1"
+        />
+        <input
+          type="text"
+          id="input5"
+          name="input5"
+          idOfInput="5"
+          maxlength="1"
+          oninput="this.value = this.value.toUpperCase()"
+        />
+      </form>
+    </div>
+
+    <div id="contentWrapper">
+      <!-- Form 3-->
+      <form action="/submite" method="POST" id="form3" class="deactive form">
+        <!-- Input Fields 3-->
+        <input
+          type="text"
+          id="input1"
+          name="input1"
+          oninput="moveToNextInput(this, 2), this.value = this.value.toUpperCase()"
+          idOfInput="1"
+          maxlength="1"
+          autofocus
+        />
+        <input
+          type="text"
+          id="input2"
+          name="input2"
+          oninput="moveToNextInput(this, 3), this.value = this.value.toUpperCase()"
+          idOfInput="2"
+          maxlength="1"
+        />
+        <input
+          type="text"
+          id="input3"
+          name="input3"
+          oninput="moveToNextInput(this, 4), this.value = this.value.toUpperCase()"
+          idOfInput="3"
+          maxlength="1"
+        />
+        <input
+          type="text"
+          id="input4"
+          name="input4"
+          oninput="moveToNextInput(this, 5), this.value = this.value.toUpperCase()"
+          idOfInput="4"
+          maxlength="1"
+        />
+        <input
+          type="text"
+          id="input5"
+          name="input5"
+          idOfInput="5"
+          maxlength="1"
+          oninput="this.value = this.value.toUpperCase()"
+        />
+      </form>
+    </div>
+
+    <div id="contentWrapper">
+      <!-- Form 4-->
+      <form action="/submite" method="POST" id="form4" class="deactive form">
+        <!-- Input Fields 4-->
+        <input
+          type="text"
+          id="input1"
+          name="input1"
+          oninput="moveToNextInput(this, 2), this.value = this.value.toUpperCase()"
+          idOfInput="1"
+          maxlength="1"
+          autofocus
+        />
+        <input
+          type="text"
+          id="input2"
+          name="input2"
+          oninput="moveToNextInput(this, 3), this.value = this.value.toUpperCase()"
+          idOfInput="2"
+          maxlength="1"
+        />
+        <input
+          type="text"
+          id="input3"
+          name="input3"
+          oninput="moveToNextInput(this, 4), this.value = this.value.toUpperCase()"
+          idOfInput="3"
+          maxlength="1"
+        />
+        <input
+          type="text"
+          id="input4"
+          name="input4"
+          oninput="moveToNextInput(this, 5), this.value = this.value.toUpperCase()"
+          idOfInput="4"
+          maxlength="1"
+        />
+        <input
+          type="text"
+          id="input5"
+          name="input5"
+          idOfInput="5"
+          maxlength="1"
+          oninput="this.value = this.value.toUpperCase()"
+        />
+      </form>
+    </div>
+
+    <div id="contentWrapper">
+      <!-- Form 5-->
+      <form action="/submite" method="POST" id="form5" class="deactive form">
+        <!-- Input Fields 5-->
+        <input
+          type="text"
+          id="input1"
+          name="input1"
+          oninput="moveToNextInput(this, 2), this.value = this.value.toUpperCase()"
+          idOfInput="1"
+          maxlength="1"
+          autofocus
+        />
+        <input
+          type="text"
+          id="input2"
+          name="input2"
+          oninput="moveToNextInput(this, 3), this.value = this.value.toUpperCase()"
+          idOfInput="2"
+          maxlength="1"
+        />
+        <input
+          type="text"
+          id="input3"
+          name="input3"
+          oninput="moveToNextInput(this, 4), this.value = this.value.toUpperCase()"
+          idOfInput="3"
+          maxlength="1"
+        />
+        <input
+          type="text"
+          id="input4"
+          name="input4"
+          oninput="moveToNextInput(this, 5), this.value = this.value.toUpperCase()"
+          idOfInput="4"
+          maxlength="1"
+        />
+        <input
+          type="text"
+          id="input5"
+          name="input5"
+          idOfInput="5"
+          maxlength="1"
+          oninput="this.value = this.value.toUpperCase()"
+        />
+      </form>
+    </div>
+
+    <div id="contentWrapper">
+      <!-- Form 6-->
+      <form action="/submite" method="POST" id="form6" class="deactive form">
+        <!-- Input Fields 6-->
+        <input
+          type="text"
+          id="input1"
+          name="input1"
+          oninput="moveToNextInput(this, 2), this.value = this.value.toUpperCase()"
+          idOfInput="1"
+          maxlength="1"
+          autofocus
+        />
+        <input
+          type="text"
+          id="input2"
+          name="input2"
+          oninput="moveToNextInput(this, 3), this.value = this.value.toUpperCase()"
+          idOfInput="2"
+          maxlength="1"
+        />
+        <input
+          type="text"
+          id="input3"
+          name="input3"
+          oninput="moveToNextInput(this, 4), this.value = this.value.toUpperCase()"
+          idOfInput="3"
+          maxlength="1"
+        />
+        <input
+          type="text"
+          id="input4"
+          name="input4"
+          oninput="moveToNextInput(this, 5), this.value = this.value.toUpperCase()"
+          idOfInput="4"
+          maxlength="1"
+        />
+        <input
+          type="text"
+          id="input5"
+          name="input5"
+          idOfInput="5"
+          maxlength="1"
+          oninput="this.value = this.value.toUpperCase()"
+        />
+      </form>
+    </div>
   </body>
 </html>

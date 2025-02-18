@@ -12,8 +12,8 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 #init the database
 init_database(app)
 
-with app.app_context():
-    print(Word.query.all())
+#with app.app_context():
+#    print(Word.query.all())
 
 @app.route('/main')
 def home():
